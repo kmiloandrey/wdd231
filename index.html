@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me</title>
+    <meta name="description" content="This is a personal website for Camilo Valdivieso, showcasing his journey into software development and the projects he is working on.">
+    <meta name="author" content="Camilo Valdivieso">
+    <!--CSS folder-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--JavaScript  links-->
+    <script src="scripts/site.js" defer></script>
+    <!--font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-</body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.webp" alt="Site Logo" class="site-logo-img">
+            <span class="site-title">Presentation</span>
+        </div>
+        <!-- Toggle Bar -->
+        <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <main>
+        <h1 class="page-title">Home</h1>
+    
+        <div class="content-grid">
+        
+            <section class="card">
+                <h2 class="card-header">About Me</h2>
+                <div class="card-body">
+                    My name is Camilo and I'm from Colombia. I'm excited to share that I am beginning my journey into
+                    software development.
+                    Driven by a passion for technology and a desire to build innovative, real-world solutions, I am eager to
+                    dive deep into
+                    coding, algorithms, and system design. While I am at the start of my technical journey, I bring a strong
+                    curiosity, a
+                    commitment to continuous learning, and a problem-solving mindset. I am looking forward to connecting
+                    with fellow tech
+                    enthusiasts, collaborating on projects, and building the foundational skills needed to launch a
+                    successful career as a
+                    developer.
+                </div>
+            </section>
+    
+            <section class="card">
+                <h2 class="card-header">Student Photo</h2>
+                <div class="card-body img-container-body">
+                    <img src="images/picture.jpeg" alt="Student Profile Image" class="student-profile-img" loading="lazy">
+                </div>
+            </section>
+        </div>
+    
+        <!-- Requirement 2: Third Section with an h2 heading -->
+        <section class="courses-section">
+            <h2 class="courses-header">Web Certificate Courses</h2>
+    
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+    
+            <div class="courses-container" id="coursesGrid">
+                <div class="course-card" data-type="wdd" data-credits="2">WDD 130</div>
+                <div class="course-card" data-type="wdd" data-credits="2">WDD 131</div>
+                <div class="course-card" data-type="wdd" data-credits="2">WDD 231</div>
+            </div>
+    
+            <div class="credits-summary">
+                The total credits for course listed above is <span id="totalCredits">6</span>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://x.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <p class="footer-meta-text">
+            <span class="footer-divider">&copy; <span id="currentyear"></span></span>
+            <span class="footer-divider">Camilo Valdivieso</span>
+            <span>Utah</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
 </html>

@@ -1,0 +1,273 @@
+/* Setup colors and fonts*/
+:root {
+    --primary-color: #084A36;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --background-color: #eff7f1;
+    --wireframe-border: #033220;
+    --font-titles: "DM Serif Display", serif;
+    --font-text: "Lora", serif;
+    --card-bg: #bdd0c7; 
+    --border-line: #999999
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* TOP BRANDING BAR FRAMEWORK STYLE */
+header {
+    background-color: var(--background-color);
+    font-family: var(--font-titles);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.site-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: block;
+}
+
+/* NAVIGATION COMPONENT ALIGNMENT SYSTEM */
+nav {
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: 400;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #31453B;
+}
+
+h1, h2{
+    font-family: var(--font-titles);
+}
+
+/* SYSTEM STRUCTURES GRID SPLIT */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-line);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header, .courses-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+/* PROFILE LAYOUT COMPONENT HOOKS */
+.img-container-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styled rule ensuring student profile photo renders beautifully and responsively */
+.student-profile-img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid var(--wireframe-border);
+    border-radius: 4px;
+}
+
+/* COURSE STYLINGS FRAMEWORK PANEL */
+.courses-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-line);
+    margin-top: 10px;
+}
+
+.courses-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px;
+}
+
+.filter-btn {
+    padding: 10px;
+    background-color: var(--background-color);
+    border: 1px solid var(--wireframe-border);
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px 15px 15px;
+}
+
+.course-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--wireframe-border);
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.credits-summary {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* DYNAMIC FOOTER PANEL HOOK */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 24px;
+    margin-top: auto;
+    border-top: 1px solid var(--border-line);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.footer-meta-text {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.modification-timestamp-line {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* DESKTOP BREAKPOINT VIEW ADJUSTMENTS MAPPED TO PICTURE 2 */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        padding: 10px 24px;
+    }
+
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .courses-container {
+        flex-direction: row;
+    }
+
+    .course-card {
+        flex: 1;
+    }
+}
