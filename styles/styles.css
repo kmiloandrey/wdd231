@@ -125,7 +125,7 @@ main {
     text-align: center;
     padding: 10px;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .card-body {
@@ -157,13 +157,6 @@ main {
     margin-top: 10px;
 }
 
-.courses-header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    text-align: center;
-    padding: 10px;
-    font-weight: 500;
-}
 
 .filter-buttons {
     display: grid;
