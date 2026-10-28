@@ -223,7 +223,7 @@ footer {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
-    padding: 24px;
+    padding: 14px;
     margin-top: auto;
     border-top: 1px solid var(--border-line);
 }
