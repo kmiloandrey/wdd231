@@ -245,31 +245,3 @@ footer {
 }
 
 
-/* Desktop adjustments */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    nav ul {
-        flex-direction: row;
-        padding-left: 20px;
-    }
-
-    nav ul li a {
-        padding: 10px 24px;
-    }
-
-    .content-grid {
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .courses-container {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 16px;
-    }
-
-    .course-card {
-        flex: 1;
-    }
-}
