@@ -25,8 +25,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* TOP BRANDING BAR FRAMEWORK STYLE */
+/* Header styling */
 header {
     background-color: var(--background-color);
     font-family: var(--font-titles);
@@ -62,7 +61,7 @@ header {
     display: block;
 }
 
-/* NAVIGATION COMPONENT ALIGNMENT SYSTEM */
+/* Navigation styling */
 nav {
     background-color: var(--primary-color);
 }
@@ -90,7 +89,7 @@ h1, h2{
     font-family: var(--font-titles);
 }
 
-/* SYSTEM STRUCTURES GRID SPLIT */
+/* Main styling */
 main {
     flex: 1;
     padding: 20px;
@@ -133,14 +132,12 @@ main {
     font-size: 0.95rem;
 }
 
-/* PROFILE LAYOUT COMPONENT HOOKS */
 .img-container-body {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Styled rule ensuring student profile photo renders beautifully and responsively */
 .student-profile-img {
     width: 100%;
     max-width: 260px;
@@ -150,11 +147,13 @@ main {
     border-radius: 4px;
 }
 
-/* COURSE STYLINGS FRAMEWORK PANEL */
+/* Course panel*/
 .courses-section {
     background-color: var(--card-bg);
     border: 1px solid var(--border-line);
-    margin-top: 10px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -170,9 +169,10 @@ main {
     background-color: var(--background-color);
     border: 1px solid var(--wireframe-border);
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     text-align: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .filter-btn.active,
@@ -182,29 +182,43 @@ main {
 }
 
 .courses-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
     padding: 0 15px 15px 15px;
 }
 
 .course-card {
     background-color: var(--background-color);
     border: 1px solid var(--wireframe-border);
-    padding: 12px;
+    border-left: 5px solid var(--primary-color);
+    padding: 16px 12px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.05rem;
     border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+}
+
+.course-card.completed {
+    background-color: #d1e7dd;
+    border-left-color: #0f5132;
 }
 
 .credits-summary {
     text-align: center;
-    padding-bottom: 15px;
-    font-size: 0.9rem;
+    padding: 12px 15px 20px 15px;
+    font-size: 1rem;
     font-weight: bold;
+    color: var(--text-dark);
 }
 
-/* DYNAMIC FOOTER PANEL HOOK */
+/* Footer styling */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -214,17 +228,15 @@ footer {
     border-top: 1px solid var(--border-line);
 }
 
-.social-icons {
-    display: flex;
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 24px;
-    font-size: 2.2rem;
-    margin-bottom: 12px;
+    transition: transform 0.2s ease;
 }
 
-.social-icons a {
-    color: var(--text-light);
-    text-decoration: none;
+.social-icons a:hover {
+    transform: scale(1.1);
 }
 
 .footer-meta-text {
@@ -232,12 +244,8 @@ footer {
     margin-bottom: 6px;
 }
 
-.modification-timestamp-line {
-    font-size: 0.85rem;
-    color: var(--text-light);
-}
 
-/* DESKTOP BREAKPOINT VIEW ADJUSTMENTS MAPPED TO PICTURE 2 */
+/* Desktop adjustments */
 @media (min-width: 768px) {
     .menu-toggle {
         display: none;
@@ -257,7 +265,8 @@ footer {
     }
 
     .courses-container {
-        flex-direction: row;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
     }
 
     .course-card {

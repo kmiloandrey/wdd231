@@ -34,18 +34,18 @@
     <!-- Navigation -->
     <nav id="mainNav">
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Chamber Project</a></li>
-            <li><a href="#">Final Project</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber-project.html">Chamber Project</a></li>
+            <li><a href="final-project.html">Final Project</a></li>
         </ul>
     </nav>
 
     <!-- Page Content -->
     <main>
         <h1 class="page-title">Home</h1>
-    
-        <div class="content-grid">
         
+        <div class="content-grid">
+        <!-- First Section with About Me and Student Photo -->
             <section class="card">
                 <h2 class="card-header">About Me</h2>
                 <div class="card-body">
@@ -62,7 +62,7 @@
                     developer.
                 </div>
             </section>
-    
+            
             <section class="card">
                 <h2 class="card-header">Student Photo</h2>
                 <div class="card-body img-container-body">
@@ -70,34 +70,37 @@
                 </div>
             </section>
         </div>
-    
-        <!-- Requirement 2: Third Section with an h2 heading -->
+        <!-- Second Section with Web Certificate Courses -->
         <section class="courses-section">
             <h2 class="courses-header">Web Certificate Courses</h2>
-    
+        
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="cse">CSE</button>
                 <button class="filter-btn" data-filter="wdd">WDD</button>
             </div>
-    
-            <div class="courses-container" id="coursesGrid">
-                <div class="course-card" data-type="wdd" data-credits="2">WDD 130</div>
-                <div class="course-card" data-type="wdd" data-credits="2">WDD 131</div>
-                <div class="course-card" data-type="wdd" data-credits="2">WDD 231</div>
-            </div>
-    
+        
+            <!-- Empty container ready for JavaScript injection -->
+            <div class="courses-container" id="coursesGrid"></div>
+        
             <div class="credits-summary">
-                The total credits for course listed above is <span id="totalCredits">6</span>
+                The total credits for course listed above is <span id="totalCredits">0</span>
             </div>
         </section>
     </main>
+    
     <!-- footer -->
     <footer>
         <div class="social-icons">
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://x.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com">
+                <img src="images/facebook_icon.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram_icon.svg" alt="Instagram Icon">
+            </a>
+            <a href="https://x.com">
+                <img src="images/x_icon.svg" alt="X Icon">
+            </a>
         </div>
         <p class="footer-meta-text">
             <span class="footer-divider">&copy; <span id="currentyear"></span></span>
