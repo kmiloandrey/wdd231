@@ -1,0 +1,63 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ebe7f1;
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #392a6e;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #d8e1ee;
+    padding: 20px;
+    border: 1px solid #9ca3af;
+}
+
+
+section {
+    background-color: #d6d4ef;
+    border: 1px solid #475569;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section h2 {
+    color: #252251;
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+}
+
+section p {
+    margin: 4px 0;
+    color: #252251;
+    font-size: 0.95rem;
+}
+
+section img {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 15px;
+    color: #392a6e;
+}
