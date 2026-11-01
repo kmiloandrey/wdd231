@@ -8,18 +8,55 @@
     <meta name="description"
         content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
     <meta name="author" content="Camilo Valdivieso">
-    <!-- Social Media Tags -->
-    <meta property="og:description"
-        content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
-    <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:image" content="images/logo.webp">
-    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
+    <!--CSS folder-->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!--JavaScript  links-->
+    <script src="scripts/directory.js" defer></script>
+
 </head>
 
 <body>
 
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.webp" alt="Site Logo" class="site-logo-img">
+            <span class="site-title">"____" Chamber of Commerce</span>
+        </div>
+        <!-- Toggle Bar -->
+        <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="final-project.html">Join</a></li>
+            <li><a href="final-project.html">Discover</a></li>
+        </ul>
+    </nav>
+    <!-- Page Content -->
+    <main>
+        <h1 class="page-title">Directory</h1>
+        <div id="cards"></div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p class="footer-meta-text">
+            <span class="footer-divider">&copy; <span id="currentyear"></span></span>
+            <span class="footer-divider">Camilo Valdivieso</span>
+            <span>Utah</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
