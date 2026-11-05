@@ -1,0 +1,295 @@
+/* ==========================================================================
+   DESKTOP OVERLAY SYSTEM (Triggers only on monitors 768px wide and above)
+   ========================================================================== */
+@media (min-width: 768px) {
+    :root {
+        --primary-color: #084A36;
+        --text-light: #ffffff;
+        --text-dark: #000000;
+        --background-color: #eff7f1;
+        --wireframe-border: #033220;
+        --font-titles: "DM Serif Display", serif;
+        --font-text: "Lora", serif;
+        --card-bg: #bdd0c7;
+        --border-line: #999999;
+    }
+
+    body {
+        font-family: var(--font-text);
+        background-color: var(--background-color);
+        color: var(--text-dark);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* HEADER & NAVIGATION HORIZONTAL ALIGNMENT */
+    header {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .site-logo-img {
+        height: 45px;
+        width: auto;
+    }
+
+    .site-title {
+        font-family: var(--font-titles);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    /* COMPONENT OVERRIDE: HIDES THE MOBILE TOGGLE ICON BUTTON ON DESKTOP VIEW */
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* EXPANDS LINK PATHS IN A STRAIGHT HORIZONTAL NAVIGATION BAR ROW */
+    #mainNav {
+        display: block !important;
+        width: auto;
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    #mainNav ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        flex-direction: row;
+    }
+
+    #mainNav ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        position: relative;
+        border-bottom: none;
+    }
+
+    #mainNav ul li a:hover {
+        opacity: 0.8;
+    }
+
+    /* MAIN CONTENT WRAPPER & TOGGLE CONTROLS */
+    main {
+        flex: 1;
+        padding: 20px 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .page-title {
+        font-family: var(--font-titles);
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        font-weight: 400;
+    }
+
+    .view-toggle-controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .toggle-btn {
+        font-family: var(--font-text);
+        padding: 0.6rem 2.5rem;
+        font-size: 1rem;
+        border: 1px solid var(--border-line);
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #gridBtn {
+        border-radius: 4px 0 0 4px;
+        border-right: none;
+    }
+
+    #listBtn {
+        border-radius: 0 4px 4px 0;
+    }
+
+    .toggle-btn.active,
+    .toggle-btn:hover {
+        background-color: #b5b5b5;
+        font-weight: bold;
+    }
+
+    /* DESKTOP LAYOUT CONFIGURATION: EXPANDS BACK INTO 3 GRID COLUMNS NATIVELY */
+    #cards.grid-view {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px;
+        padding: 20px 0;
+    }
+
+    #cards.grid-view .member-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-line);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    #cards.grid-view .card-top-header {
+        width: 100%;
+        text-align: center;
+        padding: 15px 10px 12px 10px;
+        border-bottom: 1px solid var(--border-line);
+    }
+
+    #cards.grid-view .member-card h3 {
+        font-family: var(--font-titles);
+        font-size: 1.4rem;
+        color: var(--text-dark);
+        margin-bottom: 2px;
+    }
+
+    #cards.grid-view .membership-level {
+        font-size: 0.9rem;
+        color: #444;
+        margin: 0;
+    }
+
+    #cards.grid-view .member-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        text-align: left;
+    }
+
+    #cards.grid-view .member-card img {
+        width: 105px;
+        height: 105px;
+        object-fit: cover;
+        border: 1px solid var(--wireframe-border);
+        flex-shrink: 0;
+        background-color: #a0a0a0;
+    }
+
+    #cards.grid-view .info-fields-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    #cards.grid-view .member-details p {
+        font-family: var(--font-text);
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        margin: 0;
+    }
+
+    #cards.grid-view .member-details .address::before {
+        content: "EMAIL: ";
+        font-weight: bold;
+    }
+
+    #cards.grid-view .member-details .phone::before {
+        content: "PHONE: ";
+        font-weight: bold;
+    }
+
+    #cards.grid-view .member-details .website::before {
+        content: "URL: ";
+        font-weight: bold;
+    }
+
+    #cards.grid-view .website a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    #cards.grid-view .website a:hover {
+        text-decoration: underline;
+    }
+
+    /* ALTERNATIVE DESKTOP LIST VIEW STRIP LAYOUT */
+    #cards.list-view {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem;
+        padding: 20px 0;
+    }
+
+    #cards.list-view .member-card {
+        background-color: transparent;
+        padding: 1rem 2rem;
+        border: none;
+        border-bottom: 1px solid var(--border-line);
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #cards.list-view .member-card:nth-child(even) {
+        background-color: rgba(189, 208, 199, 0.2);
+    }
+
+    #cards.list-view .member-card img,
+    #cards.list-view .card-top-header .membership-level {
+        display: none;
+    }
+
+    #cards.list-view .card-top-header {
+        text-align: left;
+    }
+
+    #cards.list-view .member-card h3 {
+        font-size: 1.25rem;
+    }
+
+    #cards.list-view .info-fields-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* FOOTER STYLING */
+    footer {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        text-align: center;
+        padding: 14px;
+        margin-top: auto;
+        border-top: 1px solid var(--border-line);
+    }
+
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-meta-text {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+}

@@ -14,45 +14,75 @@
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:description"
         content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
-    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:image" content="images/springfield.webp">
     <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
     <!--CSS folder-->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <!--JavaScript  links-->
     <script src="scripts/directory.js" defer></script>
+    <!--font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
-
+    
     <header>
         <div class="logo-area">
-            <img src="images/logo.webp" alt="Site Logo" class="site-logo-img">
-            <span class="site-title">"____" Chamber of Commerce</span>
+            <img src="images/springfield.webp" alt="Site Logo" class="site-logo-img">
+            <span class="site-title">Springfield Chamber of Commerce</span>
         </div>
-        <!-- Toggle Bar -->
+
+        <!-- Navigation -->
+        <nav id="mainNav">
+            <ul>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="final-project.html">Join</a></li>
+                <li><a href="final-project.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <!-- Toggle Button -->
         <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </div>
     </header>
-    <!-- Navigation -->
-    <nav id="mainNav">
-        <ul>
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="final-project.html">Join</a></li>
-            <li><a href="final-project.html">Discover</a></li>
-        </ul>
-    </nav>
     <!-- Page Content -->
     <main>
         <h1 class="page-title">Directory</h1>
-        <div id="cards"></div>
+    
+        <!-- View Toggle Controls Section -->
+        <div class="view-toggle-controls">
+            <button id="gridBtn" class="toggle-btn active">Grid</button>
+            <button id="listBtn" class="toggle-btn">List</button>
+        </div>
+    
+        <!-- Single Target Container for JavaScript Output -->
+        <div id="cards" class="grid-view"></div>
     </main>
     <!-- Footer -->
     <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com">
+                <img src="images/facebook_icon.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram_icon.svg" alt="Instagram Icon">
+            </a>
+            <a href="https://x.com">
+                <img src="images/x_icon.svg" alt="X Icon">
+            </a>
+        </div>
         <p class="footer-meta-text">
             <span class="footer-divider">&copy; <span id="currentyear"></span></span>
-            <span class="footer-divider">Camilo Valdivieso</span>
+            <span class="footer-divider">Camilo Valdivieso | WDD 231</span>
             <span>Utah</span>
         </p>
         <p id="lastModified"></p>

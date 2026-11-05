@@ -1,0 +1,260 @@
+/* ==========================================================================
+   GLOBAL VARIABLES & DESIGN SETTINGS 
+   ========================================================================== */
+:root {
+    --primary-color: #084A36;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --background-color: #eff7f1;
+    --wireframe-border: #033220;
+    --font-titles: "DM Serif Display", serif;
+    --font-text: "Lora", serif;
+    --card-bg: #bdd0c7;
+    --border-line: #999999;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   MOBILE HEADER & OVERLAPPING dropdown NAVIGATION PANEL
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 50;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.site-title {
+    font-family: var(--font-titles);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* REVEALS THE HAMBURGER BUTTON ON MOBILE DEVICES */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* VERTICAL COLLAPSIBLE DROP-DOWN SYSTEM */
+#mainNav {
+    display: none;
+    background-color: #052e22;
+    border-bottom: 1px solid var(--border-line);
+    width: 100%;
+}
+
+#mainNav.open {
+    display: block;
+    /* Toggled using your working JavaScript action listener */
+}
+
+#mainNav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainNav ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   MAIN DIRECTORY LAYOUT AND VIEW SWITCHING HOOKS
+   ========================================================================== */
+main {
+    flex: 1;
+    padding: 20px 1rem;
+    width: 100%;
+}
+
+.page-title {
+    font-family: var(--font-titles);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.view-toggle-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.toggle-btn {
+    font-family: var(--font-text);
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-line);
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+#gridBtn {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+#listBtn {
+    border-radius: 0 4px 4px 0;
+}
+
+.toggle-btn.active {
+    background-color: #b5b5b5;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   GRID VIEW (Mobile Mode: Single-Column Stack)
+   ========================================================================== */
+#cards.grid-view {
+    display: flex;
+    flex-direction: column;
+    /* FORCES CARDS TO TRANSFORM INTO JUST ONE VERTICAL STACK LINE */
+    gap: 24px;
+}
+
+#cards.grid-view .member-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-line);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#cards.grid-view .card-top-header {
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px 12px 10px;
+    border-bottom: 1px solid var(--border-line);
+}
+
+#cards.grid-view .member-card h3 {
+    font-family: var(--font-titles);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+#cards.grid-view .membership-level {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Split panel contents view row layout */
+#cards.grid-view .member-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+#cards.grid-view .member-card img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    border: 1px solid var(--wireframe-border);
+    flex-shrink: 0;
+    background-color: #a0a0a0;
+}
+
+#cards.grid-view .info-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    word-break: break-all;
+}
+
+#cards.grid-view .member-details p {
+    font-size: 0.85rem;
+}
+
+#cards.grid-view .member-details .address::before {
+    content: "EMAIL: ";
+    font-weight: bold;
+}
+
+#cards.grid-view .member-details .phone::before {
+    content: "PHONE: ";
+    font-weight: bold;
+}
+
+#cards.grid-view .member-details .website::before {
+    content: "URL: ";
+    font-weight: bold;
+}
+
+#cards.grid-view .website a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   LIST VIEW (Mobile Mode Stack)
+   ========================================================================== */
+#cards.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cards.list-view .member-card {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+}
+
+#cards.list-view .member-card img,
+#cards.list-view .membership-level {
+    display: none;
+}
+
+/* ==========================================================================
+   FOOTER MARKUP
+   ========================================================================== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--border-line);
+}

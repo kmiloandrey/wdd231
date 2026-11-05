@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Springfield Nuclear Power Plant",
+        "address": "123 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1231",
+        "websiteUrl": "https://springfield-npp.com",
+        "image": "nuclear_plant.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Moe's Tavern",
+        "address": "124 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1232",
+        "websiteUrl": "https://moestavern.com",
+        "image": "moes_tavern.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "The Kwik-E-Mart",
+        "address": "125 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1233",
+        "websiteUrl": "https://kwikemart.com",
+        "image": "kwik_e_mart.webp",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Comic Book Guy's Android's Dungeon",
+        "address": "126 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1234",
+        "websiteUrl": "https://androidsdungeon.com",
+        "image": "comic_store.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "King Toot's Music Store",
+        "address": "127 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1235",
+        "websiteUrl": "https://kingtootsmusic.com",
+        "image": "king_music.webp",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Lard Lad Donuts",
+        "address": "128 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1236",
+        "websiteUrl": "https://lardladdonuts.com",
+        "image": "donuts.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "The Leftorium",
+        "address": "129 Main Street, Springfield, OR 90000",
+        "phoneNumber": "123-123-1237",
+        "websiteUrl": "https://leftorium.com",
+        "image": "the_leftorium.webp",
+        "membershipLevel": 3
+    }
+]

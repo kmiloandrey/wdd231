@@ -7,7 +7,7 @@
     --wireframe-border: #033220;
     --font-titles: "DM Serif Display", serif;
     --font-text: "Lora", serif;
-    --card-bg: #bdd0c7; 
+    --card-bg: #bdd0c7;
     --border-line: #999999
 }
 
@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: var(--font-text);
     background-color: var(--background-color);
@@ -25,6 +26,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 /* Header styling */
 header {
     background-color: var(--background-color);
@@ -85,7 +87,8 @@ nav ul li a:hover {
     background-color: #31453B;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: var(--font-titles);
 }
 
@@ -118,7 +121,8 @@ main {
     flex-direction: column;
 }
 
-.card-header, .courses-header {
+.card-header,
+.courses-header {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
@@ -243,5 +247,3 @@ footer {
     font-size: 0.9rem;
     margin-bottom: 6px;
 }
-
-
