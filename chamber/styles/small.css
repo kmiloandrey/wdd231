@@ -182,14 +182,14 @@ main {
 #cards.grid-view .member-details {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
 }
 
 #cards.grid-view .member-card img {
-    width: 95px;
-    height: 95px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border: 1px solid var(--wireframe-border);
 }
