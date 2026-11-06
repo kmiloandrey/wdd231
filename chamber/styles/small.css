@@ -1,6 +1,3 @@
-/* ==========================================================================
-   GLOBAL VARIABLES & DESIGN SETTINGS 
-   ========================================================================== */
 :root {
     --primary-color: #084A36;
     --text-light: #ffffff;
@@ -28,9 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   MOBILE HEADER & OVERLAPPING dropdown NAVIGATION PANEL
-   ========================================================================== */
+/* Header styles */
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -59,7 +54,7 @@ header {
     font-weight: bold;
 }
 
-/* REVEALS THE HAMBURGER BUTTON ON MOBILE DEVICES */
+/* Menu Toggle */
 .menu-toggle {
     display: block;
     background: none;
@@ -69,17 +64,19 @@ header {
     cursor: pointer;
 }
 
-/* VERTICAL COLLAPSIBLE DROP-DOWN SYSTEM */
+/* Navigation menu */
 #mainNav {
     display: none;
-    background-color: #052e22;
-    border-bottom: 1px solid var(--border-line);
+    background-color: var(--primary-color);
     width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
 }
 
 #mainNav.open {
     display: block;
-    /* Toggled using your working JavaScript action listener */
 }
 
 #mainNav ul {
@@ -92,13 +89,20 @@ header {
     display: block;
     color: var(--text-light);
     text-decoration: none;
-    padding: 0.85rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
 }
 
-/* ==========================================================================
-   MAIN DIRECTORY LAYOUT AND VIEW SWITCHING HOOKS
-   ========================================================================== */
+#mainNav ul li a.active {
+    background-color: #022115;
+}
+
+#mainNav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Main Style */
 main {
     flex: 1;
     padding: 20px 1rem;
@@ -122,7 +126,7 @@ main {
     padding: 0.6rem 2rem;
     font-size: 1rem;
     border: 1px solid var(--border-line);
-    background-color: #e0e0e0;
+    background-color: var(--background-color);
     cursor: pointer;
 }
 
@@ -136,17 +140,14 @@ main {
 }
 
 .toggle-btn.active {
-    background-color: #b5b5b5;
+    background-color: var(--border-line);
     font-weight: bold;
 }
 
-/* ==========================================================================
-   GRID VIEW (Mobile Mode: Single-Column Stack)
-   ========================================================================== */
+/* Grid View */
 #cards.grid-view {
     display: flex;
     flex-direction: column;
-    /* FORCES CARDS TO TRANSFORM INTO JUST ONE VERTICAL STACK LINE */
     gap: 24px;
 }
 
@@ -174,10 +175,10 @@ main {
 
 #cards.grid-view .membership-level {
     font-size: 0.9rem;
-    color: #444;
+    color: var(--text-dark);
 }
 
-/* Split panel contents view row layout */
+/* Split panel contents view */
 #cards.grid-view .member-details {
     display: flex;
     flex-direction: row;
@@ -191,8 +192,6 @@ main {
     height: 95px;
     object-fit: cover;
     border: 1px solid var(--wireframe-border);
-    flex-shrink: 0;
-    background-color: #a0a0a0;
 }
 
 #cards.grid-view .info-fields-wrapper {
@@ -224,11 +223,12 @@ main {
 #cards.grid-view .website a {
     color: var(--primary-color);
     text-decoration: none;
+    color: #04251B;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-/* ==========================================================================
-   LIST VIEW (Mobile Mode Stack)
-   ========================================================================== */
+/* List View */
 #cards.list-view {
     display: flex;
     flex-direction: column;
@@ -236,7 +236,7 @@ main {
 }
 
 #cards.list-view .member-card {
-    background-color: white;
+    background-color: var(--background-color);
     padding: 1rem;
     border: 1px solid var(--border-line);
     border-radius: 6px;
@@ -247,9 +247,7 @@ main {
     display: none;
 }
 
-/* ==========================================================================
-   FOOTER MARKUP
-   ========================================================================== */
+/* Footer styles */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);

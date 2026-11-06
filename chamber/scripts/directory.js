@@ -1,8 +1,8 @@
-/* last modified time for footer */
+// last modified time for footer
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
 
-// 1. Paths & Selectors (Declared at the top)
+// Paths & Selectors
 const jsonPath = "data/members.json";
 const cardsContainer = document.querySelector("#cards");
 const gridBtn = document.querySelector("#gridBtn");
@@ -10,14 +10,14 @@ const listBtn = document.querySelector("#listBtn");
 const menuButton = document.querySelector("#menuButton");
 const mainNav = document.querySelector("#mainNav");
 
-// Map numeric membership levels to readable text strings
+//  membership levels to readable text strings
 const membershipMap = {
     1: "Silver",
     2: "Gold",
     3: "Platinum"
 };
 
-// 3. Grid vs List View Toggle Controls
+// Grid vs List View Toggle Controls
 if (gridBtn && listBtn && cardsContainer) {
     gridBtn.addEventListener("click", () => {
         cardsContainer.className = "grid-view";
@@ -32,7 +32,7 @@ if (gridBtn && listBtn && cardsContainer) {
     });
 }
 
-// 4. Fetch Member JSON Data Runtime
+//   Member JSON Data Runtime
 async function getMemberData() {
     try {
         const response = await fetch(jsonPath);
@@ -49,7 +49,7 @@ async function getMemberData() {
     }
 }
 
-// 5. Render Data elements onto section components (UPDATED FOR WIREFRAME DESIGN)
+// Render Data elements onto section components
 const displayMembers = (members) => {
     if (!cardsContainer) return;
     cardsContainer.innerHTML = ""; // Clear existing content
@@ -62,7 +62,6 @@ const displayMembers = (members) => {
         // Get the readable membership label text string
         const levelText = membershipMap[member.membershipLevel] || "Member";
 
-        // 1. Create the edge-to-edge header area layout elements
         let topHeader = document.createElement("div");
         topHeader.className = "card-top-header";
 
@@ -76,7 +75,6 @@ const displayMembers = (members) => {
         topHeader.appendChild(name);
         topHeader.appendChild(levelLabel);
 
-        // 2. Create the lower structural container holding image left, text fields right
         let detailsContainer = document.createElement("div");
         detailsContainer.className = "member-details";
 
@@ -85,7 +83,6 @@ const displayMembers = (members) => {
         image.setAttribute("alt", `Logo of ${member.name}`);
         image.setAttribute("loading", "lazy");
 
-        // Textual metrics right wrapper container
         let infoFieldsWrapper = document.createElement("div");
         infoFieldsWrapper.className = "info-fields-wrapper";
 
@@ -104,29 +101,30 @@ const displayMembers = (members) => {
         websiteLink.setAttribute("href", member.websiteUrl);
         websiteLink.setAttribute("target", "_blank");
         websiteLink.setAttribute("rel", "noopener noreferrer");
-        // Strips "https://" off visually to keep it clean matching the picture style
+        
         websiteLink.textContent = member.websiteUrl.replace("https://", "");
 
         websiteParagraph.appendChild(websiteLink);
 
-        // Assemble the informational text fields side
         infoFieldsWrapper.appendChild(address);
         infoFieldsWrapper.appendChild(phone);
         infoFieldsWrapper.appendChild(websiteParagraph);
 
-        // Assemble the dynamic layout panels inside details box
         detailsContainer.appendChild(image);
         detailsContainer.appendChild(infoFieldsWrapper);
 
-        // Assemble components onto the main structural card section element
         card.appendChild(topHeader);
         card.appendChild(detailsContainer);
 
-        // Render card container onto the DOM viewport
         cardsContainer.appendChild(card);
     });
 };
 
+// Toggle mobile menu visibility
+if (menuButton && mainNav) {
+    menuButton.addEventListener("click", () => {
+        mainNav.classList.toggle("open");
+    });
+}
 
-// 7. Initialize script execution
 getMemberData();

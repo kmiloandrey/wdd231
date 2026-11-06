@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    
+    <!-- Logo area -->
     <header>
         <div class="logo-area">
             <img src="images/springfield.webp" alt="Site Logo" class="site-logo-img">
@@ -52,23 +52,31 @@
 
         <!-- Toggle Button -->
         <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
-    </div>
+        </div>
     </header>
+    
     <!-- Page Content -->
     <main>
         <h1 class="page-title">Directory</h1>
-    
-        <!-- View Toggle Controls Section -->
+
+        <!-- Grid and List View Toggle -->
         <div class="view-toggle-controls">
             <button id="gridBtn" class="toggle-btn active">Grid</button>
             <button id="listBtn" class="toggle-btn">List</button>
         </div>
-    
-        <!-- Single Target Container for JavaScript Output -->
+
+        <!--  JavaScript Output -->
         <div id="cards" class="grid-view"></div>
     </main>
     <!-- Footer -->
     <footer>
+        <div class="chamber-info">
+            <p class="chamber-title">Springfield Chamber of Commerce</p>
+            <p>123 Main Street, Springfield, OR 90000</p>
+            <p>info@springfieldchamber.org</p>
+            <p>123-123-1238</p>
+        </div>
+
         <div class="social-icons">
             <a href="https://facebook.com">
                 <img src="images/facebook_icon.svg" alt="Facebook Icon">
@@ -80,12 +88,13 @@
                 <img src="images/x_icon.svg" alt="X Icon">
             </a>
         </div>
-        <p class="footer-meta-text">
-            <span class="footer-divider">&copy; <span id="currentyear"></span></span>
-            <span class="footer-divider">Camilo Valdivieso | WDD 231</span>
-            <span>Utah</span>
-        </p>
-        <p id="lastModified"></p>
+
+        <div class="footer-meta">
+            <p>WDD 231 Class Project</p>
+            <p>Camilo Valdivieso</p>
+            <p>&copy; <span id="currentyear"></span> Springfield Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 
