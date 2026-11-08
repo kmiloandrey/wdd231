@@ -1,0 +1,151 @@
+/* desktop styles */
+@media (min-width: 768px) {
+    :root {
+        --primary-color: #084A36;
+        --text-light: #ffffff;
+        --text-dark: #000000;
+        --background-color: #eff7f1;
+        --wireframe-border: #033220;
+        --font-titles: "DM Serif Display", serif;
+        --font-text: "Lora", serif;
+        --card-bg: #bdd0c7;
+        --border-line: #999999;
+    }
+
+    body {
+        font-family: var(--font-text);
+        background-color: var(--background-color);
+        color: var(--text-dark);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Header styles*/
+    header {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+        position: relative;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .site-logo-img {
+        height: 45px;
+        width: auto;
+    }
+
+    .site-title {
+        font-family: var(--font-titles);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+
+    .menu-toggle {
+        display: none;
+    }
+
+    #mainNav {
+        display: block;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    #mainNav ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        flex-direction: row;
+    }
+
+    #mainNav ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        position: relative;
+        border-bottom: none;
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    #mainNav ul li a.active {
+        background-color: transparent;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    #mainNav ul li a:hover {
+        opacity: 0.8;
+        background-color: transparent;
+    }
+
+    /* Desktop Responsive Dashboard Layout Rules */
+    .home-container {
+        padding: 2rem 4rem;
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Transform columns to grid row */
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 4rem;
+        gap: 2rem;
+        border-top: 1px solid var(--border-line);
+    }
+
+    footer p {
+        margin: 4px 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        display: inline-flex;
+        transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-meta {
+        text-align: right;
+    }
+}

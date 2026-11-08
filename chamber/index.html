@@ -17,11 +17,10 @@
     <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
     <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
     <!--CSS folder-->
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/indexsmall.css">
+    <link rel="stylesheet" href="styles/indexlarge.css">
     <!--JavaScript  links-->
-    <script src="scripts/directory.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/index.js" defer></script>
     <!--font  links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +45,7 @@
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="final-project.html">Join</a></li>
+                <li><a href="join.html">Join</a></li>
                 <li><a href="final-project.html">Discover</a></li>
             </ul>
         </nav>
@@ -56,17 +55,52 @@
     </header>
 
     <!-- Page Content -->
-    <main>
-        <header>
-            <h1>Weather</h1>
-        </header>
-        <main>
-            <p>The current temperature in Springfield, Oregon is <span id="current-temp"></span></p>
-            <figure>
-                <img id="weather-icon" src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-        </main>
+    <main class="home-container">
+        <!-- Hero Section with Attention Grabbing Visuals -->
+        <section class="hero-panel">
+            <img src="images/springfieldcity.webp" alt="Springfield City" class="hero-image">
+            <div class="hero-content">
+                <h1>Welcome to Springfield</h1>
+                <p>Empowering local business. Advancing community growth. Shaping our digital horizon together.</p>
+                <a href="join.html" class="cta-button">Join Our Network</a>
+            </div>
+        </section>
+
+        <!-- Information Grid Dashboard -->
+        <div class="dashboard-grid">
+
+            <!-- Weather Card -->
+            <section class="card weather-card">
+                <h2>Local Forecast</h2>
+                <div class="weather-info">
+                    <p class="temp-display">Springfield, OR: <span id="current-temp">--</span></p>
+                    <figure>
+                        <img id="weather-icon" src="" alt="Weather condition visual">
+                        <figcaption>Loading today's forecast...</figcaption>
+                    </figure>
+                </div>
+                <!-- 3-Day Forecast Section -->
+                <div class="forecast-container">
+                    <h3>3-Day Outlook</h3>
+                    <div id="forecast-days" class="forecast-days-grid"></div>
+                </div>
+            </section>
+
+            <!-- Calls to Action Grid Card -->
+            <section class="card cta-card">
+                <h2>Chamber Initiatives</h2>
+                <div class="action-links">
+                    <a href="directory.html" class="action-btn">Explore Local Directory</a>
+                </div>
+            </section>
+
+            <!-- Business Spotlights Section -->
+            <section class="card spotlight-card">
+                <h2>Business Spotlight</h2>
+                <div id="spotlight-container" class="spotlight-wrapper"></div>
+            </section>
+
+        </div>
     </main>
     <!-- Footer -->
     <footer>

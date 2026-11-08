@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #084A36;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --background-color: #eff7f1;
+    --wireframe-border: #033220;
+    --font-titles: "DM Serif Display", serif;
+    --font-text: "Lora", serif;
+    --card-bg: #bdd0c7;
+    --border-line: #999999;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 50;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.site-title {
+    font-family: var(--font-titles);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* Navigation menu */
+#mainNav {
+    display: none;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+#mainNav.open {
+    display: block;
+}
+
+#mainNav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainNav ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+#mainNav ul li a.active {
+    background-color: #022115;
+}
+
+#mainNav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Home Page Dashboard Layout */
+.home-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Hero Elements styling */
+.hero-panel {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(65%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 19%;
+    left: 5%;
+    color: var(--text-light);
+    width: 90%;
+}
+
+.hero-content h1 {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffd700;
+    color: var(--text-dark);
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Grid Box Layout Setup */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--wireframe-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-family: var(--font-titles);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.3rem;
+}
+
+/* Weather layout adjustments */
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.temp-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Weather Forecast Layout Rules */
+.forecast-container {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--wireframe-border);
+}
+
+.forecast-container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.forecast-days-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 0.5rem;
+    border-radius: 4px;
+    flex: 1;
+    text-align: center;
+}
+
+.day-label {
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.day-temp {
+    font-size: 0.9rem;
+}
+
+/* CTA & Action Button stacks */
+.action-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Spotlight Layout Styling */
+.spotlight-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.spotlight-item {
+    border-bottom: 1px dashed var(--wireframe-border);
+    padding-bottom: 1rem;
+}
+
+.spotlight-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spotlight-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--wireframe-border);
+    background-color: #fff;
+}
+
+.spotlight-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.15rem;
+    font-size: 1.1rem;
+}
+
+.membership-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+}
+
+.gold-badge {
+    background-color: #d4af37 !important;
+    color: #000 !important;
+}
+
+.silver-badge {
+    background-color: #aaa9ad !important;
+    color: #000 !important;
+}
+
+.spotlight-details p {
+    font-size: 0.85rem;
+    margin: 3px 0;
+}
+
+.spotlight-link {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spotlight-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--border-line);
+}
