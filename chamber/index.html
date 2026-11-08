@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="description"
+        content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
+    <meta name="author" content="Camilo Valdivieso">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="This page is a directory of members for the Chamber of Commerce, including their names, contact information, and membership status.">
+    <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
+    <!--CSS folder-->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!--JavaScript  links-->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <!--font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Logo area -->
+    <header>
+        <div class="logo-area">
+            <img src="images/springfield.webp" alt="Site Logo" class="site-logo-img">
+            <span class="site-title">Springfield Chamber of Commerce</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="final-project.html">Join</a></li>
+                <li><a href="final-project.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <!-- Toggle Button -->
+        <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+        <header>
+            <h1>Weather</h1>
+        </header>
+        <main>
+            <p>The current temperature in Springfield, Oregon is <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </main>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="chamber-info">
+            <p class="chamber-title">Springfield Chamber of Commerce</p>
+            <p>123 Main Street, Springfield, OR 90000</p>
+            <p>info@springfieldchamber.org</p>
+            <p>123-123-1238</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com">
+                <img src="images/facebook_icon.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram_icon.svg" alt="Instagram Icon">
+            </a>
+            <a href="https://x.com">
+                <img src="images/x_icon.svg" alt="X Icon">
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD 231 Class Project</p>
+            <p>Camilo Valdivieso</p>
+            <p>&copy; <span id="currentyear"></span> Springfield Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
