@@ -8,6 +8,7 @@
     --font-text: "Lora", serif;
     --card-bg: #bdd0c7;
     --border-line: #999999;
+    --secundary-color: #04251B;
 }
 
 * {
@@ -173,7 +174,7 @@ header {
 
 .card h2 {
     font-family: var(--font-titles);
-    color: var(--primary-color);
+    color: #04251B;
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.3rem;
@@ -201,7 +202,7 @@ header {
 .forecast-container h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: var(--secundary-color);
 }
 
 .forecast-days-grid {
@@ -281,7 +282,7 @@ header {
 }
 
 .spotlight-item h3 {
-    color: var(--primary-color);
+    color: #04251B;
     margin-bottom: 0.15rem;
     font-size: 1.1rem;
 }
@@ -295,13 +296,13 @@ header {
 }
 
 .gold-badge {
-    background-color: #d4af37 !important;
-    color: #000 !important;
+    background-color: #d4af37 ;
+    color: #000;
 }
 
 .silver-badge {
-    background-color: #aaa9ad !important;
-    color: #000 !important;
+    background-color: #d8d8dc;
+    color: #000;
 }
 
 .spotlight-details p {
@@ -313,7 +314,7 @@ header {
     display: inline-block;
     margin-top: 0.4rem;
     font-size: 0.85rem;
-    color: var(--primary-color);
+    color: #04251B;
     font-weight: bold;
     text-decoration: none;
 }
