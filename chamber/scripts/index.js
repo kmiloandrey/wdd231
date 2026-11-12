@@ -53,6 +53,8 @@ function displayCurrentWeather(data) {
 
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+    weatherIcon.classList.remove('hidden-icon');
+    
     captionDesc.textContent = desc.charAt(0).toUpperCase() + desc.slice(1);
 }
 

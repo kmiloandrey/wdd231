@@ -187,6 +187,10 @@ header {
     justify-content: space-around;
 }
 
+.hidden-icon {
+    visibility: hidden;
+}
+
 .temp-display {
     font-size: 1.2rem;
     font-weight: bold;
@@ -230,6 +234,8 @@ header {
 .day-temp {
     font-size: 0.9rem;
 }
+
+
 
 /* CTA & Action Button stacks */
 .action-links {
