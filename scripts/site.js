@@ -87,24 +87,55 @@ const courses = [
 const coursesGrid = document.getElementById('coursesGrid');
 const totalCreditsEl = document.getElementById('totalCredits');
 const filterButtons = document.querySelectorAll('.filter-btn');
+const courseDetails = document.getElementById('course-details'); // Get the dialog element (modal)
 
-//  Display courses and calculate credit
+// Display course modal details
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+    <button id="closeModal" aria-label="Close">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+    courseDetails.showModal();
+
+    courseDetails.querySelector('#closeModal').addEventListener('click', () => {
+        courseDetails.close();
+    });
+}
+
+// Close the modal when the user clicks outside of it (on the backdrop)
+courseDetails.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+// Display courses and calculate credit
 function displayCourses(filteredCourses) {
-    
     coursesGrid.innerHTML = '';
 
     filteredCourses.forEach(course => {
-        const card = document.createElement('div');
+        // 1. Created as a <button> instead of a <div> for keyboard accessibility
+        const courseCard = document.createElement('button');
 
-        card.classList.add('course-card');
+        courseCard.classList.add('course-card');
         if (course.completed) {
-            card.classList.add('completed');
+            courseCard.classList.add('completed');
         }
 
-        card.textContent = `${course.subject} ${course.number}`;
-        card.title = `${course.title} (${course.credits} Credits)`;
+        courseCard.textContent = `${course.subject} ${course.number}`;
+        courseCard.title = `${course.title} (${course.credits} Credits)`;
 
-        coursesGrid.appendChild(card);
+        // 2. Click event listener attached inside the loop
+        courseCard.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
+        coursesGrid.appendChild(courseCard);
     });
 
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
@@ -129,3 +160,4 @@ filterButtons.forEach(button => {
     });
 });
 
+displayCourses(courses);
