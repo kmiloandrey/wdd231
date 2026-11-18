@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Join</title>
+    <title>Thank You</title>
     <meta name="description"
         content="This page is for joining the Chamber of Commerce, including membership information and application details.">
     <meta name="author" content="Camilo Valdivieso">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
     <!-- Social Media Tags -->
-    <meta property="og:title" content="Chamber of Commerce Join">
+    <meta property="og:title" content="Thank You for Applying to the Springfield Chamber of Commerce">
     <meta property="og:description"
-        content="This page is for joining the Chamber of Commerce, including membership information and application details.">
+        content="This page is for Thank You messages for the Chamber of Commerce Application.">
     <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
-    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/join.html">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/thankyou.html">
     <!--CSS folder-->
-    <link rel="stylesheet" href="styles/joinlarge.css">
     <link rel="stylesheet" href="styles/joinsmall.css">
+    <link rel="stylesheet" href="styles/joinlarge.css">
     <!--JavaScript  links-->
-    <script src="scripts/join.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
     <!--font  links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +55,165 @@
     </header>
 
     <!-- Page Content -->
-    <main class="home-container">
- 
+    <main class="join-container">
+        <h1>Join</h1>
+
+        <div class="join-layout">
+            <!-- Left Column with Membership Application Form -->
+            <section class="form-section card">
+                <h2>Membership Application Form</h2>
+                <form method="get" action="thankyou.html" class="join-form">
+
+                    <label for="firstName">First Name *
+                        <input type="text" id="firstName" name="firstName" title="Applicant's First Name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label for="lastName">Last Name *
+                        <input type="text" id="lastName" name="lastName" title="Applicant's Last Name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label for="orgTitle">Organizational Title
+                        <input type="text" id="orgTitle" name="orgTitle"
+                            title="Organizational Title (letters, spaces, and hyphens only, minimum 7 characters)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email">Email Address *
+                        <input type="email" id="email" name="email" title="Applicant's Email Address"
+                            autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+
+                    <label for="phone">Mobile Phone Number *
+                        <input type="tel" id="phone" name="phone" title="Applicant's Mobile Phone Number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <label for="organization">Business / Organization Name *
+                        <input type="text" id="organization" name="organization" title="Business or Organization Name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <label for="membershipLevel">Membership Level *
+                        <select id="membershipLevel" name="membershipLevel" title="Select Membership Level" required>
+                            <option value="" disabled selected>Select a Membership Level...</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                            <option value="platinum">Platinum Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">Business / Organization Description
+                        <textarea id="description" name="description" title="Describe your business or organization"
+                            rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Apply for Membership" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- Right Column, with the Membership Level Cards -->
+            <section class="membership-levels">
+                <h2>Membership Levels</h2>
+            
+                <div class="level-cards-grid">
+                    <div class="level-card level-np">
+                        <h3>Non Profit Membership Level</h3>
+                        <a href="#npModal" class="learn-more-btn" data-modal="npModal">Learn More</a>
+                    </div>
+            
+                    <div class="level-card level-silver">
+                        <h3>Silver Membership Level</h3>
+                        <a href="#silverModal" class="learn-more-btn" data-modal="silverModal">Learn More</a>
+                    </div>
+            
+                    <div class="level-card level-gold">
+                        <h3>Gold Membership Level</h3>
+                        <a href="#goldModal" class="learn-more-btn" data-modal="goldModal">Learn More</a>
+                    </div>
+            
+                    <div class="level-card level-platinum">
+                        <h3>Platinum Membership Level</h3>
+                        <a href="#platinumModal" class="learn-more-btn" data-modal="platinumModal">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4 Dialog Modals -->
+        <dialog id="npModal" class="membership-modal">
+            <div class="modal-header">
+                <h3>Non Profit Membership</h3>
+                <button type="button" class="close-modal" aria-label="Close Non Profit Membership Modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="benefits-heading">Benefits include:</p>
+                <ul>
+                    <li>Official listing in the Springfield Chamber Directory</li>
+                    <li>Access to monthly community networking mixers</li>
+                    <li>Invitations to annual non-profit workshops and training</li>
+                </ul>
+                <p class="modal-cost">COST: Free</p>
+            </div>
+        </dialog>
+        
+        <dialog id="silverModal" class="membership-modal">
+            <div class="modal-header">
+                <h3>Silver Membership</h3>
+                <button type="button" class="close-modal" aria-label="Close Silver Membership Modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="benefits-heading">Benefits include:</p>
+                <ul>
+                    <li>All Non Profit Membership benefits</li>
+                    <li>Invitations to special Chamber luncheons and business expos</li>
+                    <li>15% discount on Chamber training seminars and event tickets</li>
+                    <li>Business ribbon-cutting ceremony promotion</li>
+                </ul>
+                <p class="modal-cost">COST: $50 annual</p>
+            </div>
+        </dialog>
+        
+        <dialog id="goldModal" class="membership-modal">
+            <div class="modal-header">
+                <h3>Gold Membership</h3>
+                <button type="button" class="close-modal" aria-label="Close Gold Membership Modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="benefits-heading">Benefits include:</p>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Rotating advertising spotlight position on the Home Page</li>
+                    <li>30% discount on event tickets, trainings, and booth rentals</li>
+                    <li>Featured social media shoutout once per quarter</li>
+                </ul>
+                <p class="modal-cost">COST: $100 annual</p>
+            </div>
+        </dialog>
+        
+        <dialog id="platinumModal" class="membership-modal">
+            <div class="modal-header">
+                <h3>Platinum Membership</h3>
+                <button type="button" class="close-modal" aria-label="Close Platinum Membership Modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="benefits-heading">Benefits include:</p>
+                <ul>
+                    <li>All Gold Membership benefits</li>
+                    <li>Priority top-tier Home Page Spotlight placement</li>
+                    <li>VIP invitations to exclusive Chamber leadership events</li>
+                    <li>50% discount on all Chamber events, sponsorships, and trainings</li>
+                    <li>Dedicated banner ad in the monthly Springfield newsletter</li>
+                </ul>
+                <p class="modal-cost">COST: $150 annual</p>
+            </div>
+        </dialog>
     </main>
+
     <!-- Footer -->
     <footer>
         <div class="chamber-info">

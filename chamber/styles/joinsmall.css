@@ -1,0 +1,416 @@
+:root {
+    --primary-color: #084A36;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --background-color: #eff7f1;
+    --wireframe-border: #033220;
+    --font-titles: "DM Serif Display", serif;
+    --font-text: "Lora", serif;
+    --card-bg: #bdd0c7;
+    --border-line: #999999;
+    --secundary-color: #04251B;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 50;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.site-title {
+    font-family: var(--font-titles);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* Navigation menu */
+#mainNav {
+    display: none;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+#mainNav.open {
+    display: block;
+}
+
+#mainNav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainNav ul li a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+#mainNav ul li a.active {
+    background-color: #022115;
+}
+
+#mainNav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Join Page Main Layout (Mobile-First: Form on top, Cards below) */
+.join-container {
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.join-container h1 {
+    font-family: var(--font-titles);
+    color: var(--secundary-color);
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--wireframe-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-family: var(--font-titles);
+    color: var(--secundary-color);
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.35rem;
+}
+
+/* Form Layout & Fields */
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--secundary-color);
+    gap: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--wireframe-border);
+    border-radius: 4px;
+    font-family: var(--font-text);
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: var(--text-dark);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+}
+
+/* Visual indicator for required and valid inputs */
+.join-form input:required,
+.join-form select:required {
+    border-left: 5px solid #b02a37;
+}
+
+.join-form input:required:valid,
+.join-form select:required:valid {
+    border-left: 5px solid var(--primary-color);
+}
+
+.join-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secundary-color);
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+/* Membership Level Cards Section */
+.membership-levels h2 {
+    font-family: var(--font-titles);
+    color: var(--secundary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.35rem;
+}
+
+.level-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.level-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--wireframe-border);
+    border-radius: 12px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.level-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.14);
+}
+
+.level-card h3 {
+    font-family: var(--font-titles);
+    color: var(--secundary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 0.55rem 1.35rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--secundary-color);
+}
+
+/*  Modal Styling */
+dialog.membership-modal {
+    margin: auto;
+    width: 90%;
+    max-width: 480px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+dialog.membership-modal::backdrop {
+    background-color: rgba(4, 37, 27, 0.65);
+    backdrop-filter: blur(2px);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--wireframe-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.modal-header h3 {
+    font-family: var(--font-titles);
+    color: var(--secundary-color);
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    background-color: #ffffff;
+    border: 1px solid var(--wireframe-border);
+    border-radius: 6px;
+    color: var(--secundary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.modal-body .benefits-heading {
+    font-weight: bold;
+    color: var(--secundary-color);
+    margin-bottom: 0.65rem;
+}
+
+.modal-body ul {
+    margin-left: 1.4rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.modal-cost {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--border-line);
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(22px);
+        background-color: #e4efe9;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        background-color: var(--card-bg);
+    }
+}
+
+.level-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--wireframe-border);
+    border-radius: 12px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    /* Initial display animation */
+    opacity: 0;
+    animation: cardEntrance 0.65s ease-out forwards;
+}
+
+/* Stagger each card */
+.level-np {
+    animation-delay: 0.1s;
+}
+
+.level-silver {
+    animation-delay: 0.22s;
+}
+
+.level-gold {
+    animation-delay: 0.34s;
+}
+
+.level-platinum {
+    animation-delay: 0.46s;
+}
+
+.level-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.14);
+}
