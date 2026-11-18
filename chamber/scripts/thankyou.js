@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Map membership value codes to readable labels
     const membershipLabels = {
         np: "NP Membership (Non-Profit - No Fee)",
-        silver: "Silver Membership ($50/year)",
-        gold: "Gold Membership ($100/year)",
-        platinum: "Platinum Membership ($150/year)"
+        bronze: "Bronze Membership ($50/year)",
+        silver: "Silver Membership ($100/year)",
+        gold: "Gold Membership ($150/year)"
     };
     const membershipDisplay = membershipLabels[membershipCode] || "Not selected";
 

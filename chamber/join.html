@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <title>Join - Springfield Chamber of Commerce</title>
     <meta name="description"
         content="This page is for joining the Chamber of Commerce, including membership information and application details.">
     <meta name="author" content="Camilo Valdivieso">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
     <!-- Social Media Tags -->
-    <meta property="og:title" content="Thank You for Applying to the Springfield Chamber of Commerce">
+    <meta property="og:title" content="Join the Springfield Chamber of Commerce">
     <meta property="og:description"
-        content="This page is for Thank You messages for the Chamber of Commerce Application.">
+        content="This page is for joining the Chamber of Commerce, including membership information and application details.">
     <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
-    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/join.html">
     <!--CSS folder-->
     <link rel="stylesheet" href="styles/joinsmall.css">
     <link rel="stylesheet" href="styles/joinlarge.css">
@@ -99,9 +99,9 @@
                         <select id="membershipLevel" name="membershipLevel" title="Select Membership Level" required>
                             <option value="" disabled selected>Select a Membership Level...</option>
                             <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
                             <option value="silver">Silver Membership</option>
                             <option value="gold">Gold Membership</option>
-                            <option value="platinum">Platinum Membership</option>
                         </select>
                     </label>
 
@@ -126,6 +126,11 @@
                         <a href="#npModal" class="learn-more-btn" data-modal="npModal">Learn More</a>
                     </div>
             
+                    <div class="level-card level-bronze">
+                        <h3>Bronze Membership Level</h3>
+                        <a href="#bronzeModal" class="learn-more-btn" data-modal="bronzeModal">Learn More</a>
+                    </div>
+            
                     <div class="level-card level-silver">
                         <h3>Silver Membership Level</h3>
                         <a href="#silverModal" class="learn-more-btn" data-modal="silverModal">Learn More</a>
@@ -134,11 +139,6 @@
                     <div class="level-card level-gold">
                         <h3>Gold Membership Level</h3>
                         <a href="#goldModal" class="learn-more-btn" data-modal="goldModal">Learn More</a>
-                    </div>
-            
-                    <div class="level-card level-platinum">
-                        <h3>Platinum Membership Level</h3>
-                        <a href="#platinumModal" class="learn-more-btn" data-modal="platinumModal">Learn More</a>
                     </div>
                 </div>
             </section>
@@ -161,6 +161,23 @@
             </div>
         </dialog>
         
+        <dialog id="bronzeModal" class="membership-modal">
+            <div class="modal-header">
+                <h3>Bronze Membership</h3>
+                <button type="button" class="close-modal" aria-label="Close Bronze Membership Modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p class="benefits-heading">Benefits include:</p>
+                <ul>
+                    <li>All Non Profit Membership benefits</li>
+                    <li>Invitations to special Chamber luncheons and business expos</li>
+                    <li>10% discount on Chamber training seminars and workshops</li>
+                    <li>Business ribbon-cutting ceremony promotion</li>
+                </ul>
+                <p class="modal-cost">COST: $50 annual</p>
+            </div>
+        </dialog>
+        
         <dialog id="silverModal" class="membership-modal">
             <div class="modal-header">
                 <h3>Silver Membership</h3>
@@ -169,12 +186,12 @@
             <div class="modal-body">
                 <p class="benefits-heading">Benefits include:</p>
                 <ul>
-                    <li>All Non Profit Membership benefits</li>
-                    <li>Invitations to special Chamber luncheons and business expos</li>
-                    <li>15% discount on Chamber training seminars and event tickets</li>
-                    <li>Business ribbon-cutting ceremony promotion</li>
+                    <li>All Bronze Membership benefits</li>
+                    <li>Rotating advertising spotlight position on the Home Page</li>
+                    <li>25% discount on event tickets and booth rentals</li>
+                    <li>Featured social media shoutout once per quarter</li>
                 </ul>
-                <p class="modal-cost">COST: $50 annual</p>
+                <p class="modal-cost">COST: $100 annual</p>
             </div>
         </dialog>
         
@@ -187,24 +204,7 @@
                 <p class="benefits-heading">Benefits include:</p>
                 <ul>
                     <li>All Silver Membership benefits</li>
-                    <li>Rotating advertising spotlight position on the Home Page</li>
-                    <li>30% discount on event tickets, trainings, and booth rentals</li>
-                    <li>Featured social media shoutout once per quarter</li>
-                </ul>
-                <p class="modal-cost">COST: $100 annual</p>
-            </div>
-        </dialog>
-        
-        <dialog id="platinumModal" class="membership-modal">
-            <div class="modal-header">
-                <h3>Platinum Membership</h3>
-                <button type="button" class="close-modal" aria-label="Close Platinum Membership Modal">X</button>
-            </div>
-            <div class="modal-body">
-                <p class="benefits-heading">Benefits include:</p>
-                <ul>
-                    <li>All Gold Membership benefits</li>
-                    <li>Priority top-tier Home Page Spotlight placement</li>
+                    <li>Priority Home Page Spotlight placement</li>
                     <li>VIP invitations to exclusive Chamber leadership events</li>
                     <li>50% discount on all Chamber events, sponsorships, and trainings</li>
                     <li>Dedicated banner ad in the monthly Springfield newsletter</li>
