@@ -241,6 +241,8 @@ header {
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    opacity: 0;
+    animation: cardEntrance 0.65s ease-out forwards;
 }
 
 .level-card:hover {
@@ -379,20 +381,6 @@ footer p {
     }
 }
 
-.level-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--wireframe-border);
-    border-radius: 12px;
-    padding: 1.75rem 1.25rem;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-    /* Initial display animation */
-    opacity: 0;
-    animation: cardEntrance 0.65s ease-out forwards;
-}
-
 /* Stagger each card */
 .level-np {
     animation-delay: 0.1s;
@@ -408,9 +396,4 @@ footer p {
 
 .level-gold {
     animation-delay: 0.46s;
-}
-
-.level-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.14);
 }
