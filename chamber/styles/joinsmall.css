@@ -181,7 +181,7 @@ header {
 }
 
 .submit-btn:hover {
-    background-color: var(--secundary-color);
+    background-color: var(--wireframe-border);
 }
 
 
