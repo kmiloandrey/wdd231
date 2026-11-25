@@ -54,6 +54,81 @@
         <button id="menuButton" class="menu-toggle" aria-label="Toggle Menu">☰</button>
     </header>
 
+    <!-- form -->
+    <main class="join-main">
+        <h1>Join the Chamber</h1>
+
+        <div class="join-div">
+            <section class="form-section">
+                <h2>Membership Application</h2>
+                <form method="get" action="thankyou.html" class="join-form">
+
+                    <label>
+                        First Name *
+                        <input type="text" name="firstname" title="First Name" autocomplete="first-name" required>
+                    </label>
+
+                    <label>
+                        Last Name *
+                        <input type="text" name="lastname" title="Last Name" autocomplete="last-name" required>
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="organizationaltitle"
+                            title="Organizational Title (a minimum of 7 letters, spaces, or hyphens)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label>
+                        Email Address *
+                        <input type="email" name="email" title="Email Address" autocomplete="email"
+                            placeholder="user@gmail.com" required>
+                    </label>
+
+                    <label>
+                        Mobile Phone Number *
+                        <input type="tel" name="phone" title="Phone Number" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        Business / Organization Name *
+                        <input type="text" name="organization" title="Business or Organization Name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <fieldset class="membership-fieldset">
+                        <legend>Membership Level</legend>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="np" required>
+                            NP Membership (Non-Profit — No Fee)
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="bronze">
+                            Bronze Membership
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="silver">
+                            Silver Membership
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="membership" value="gold">
+                            Gold Membership
+                        </label>
+                    </fieldset>
+
+                    <label>
+                        Business / Organization Description
+                        <textarea name="description" title="Business or Organization Description" rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Join Here!!" class="submit-btn">
+                </form>
+            </section>
+        </div>
+    </main>
 
 
     <!-- Footer -->
