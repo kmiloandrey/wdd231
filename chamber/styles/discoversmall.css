@@ -93,6 +93,10 @@ header {
 }
 
 /* Main style */
+h1 {
+    font-family: var(--font-titles);
+    padding:1rem 1rem;
+}
 
 #allplaces div {
     margin: 1rem 8px;
@@ -109,9 +113,11 @@ header {
     "location";
 }
 
+
 #allplaces div h2 {
     margin: 1rem 10px;
     grid-area: name;
+    font-family: var(--font-titles);
 }
 
 #allplaces div img {
@@ -122,6 +128,7 @@ header {
 #allplaces div p{
     margin: 1rem 10px;
     grid-area: description;
+    font-family: var(--font-text);
 }
 
 #allplaces div address {
