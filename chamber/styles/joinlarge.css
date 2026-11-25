@@ -51,31 +51,7 @@
         background-color: transparent;
     }
 
-    /* Join Page Desktop Layout: Form on left, Membership Cards on right */
-    .join-container {
-        padding: 2.5rem 4rem;
-        max-width: 1200px;
-    }
-
-    .join-container h1 {
-        font-size: 2.5rem;
-    }
-
-    .join-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-        gap: 2.5rem;
-        align-items: start;
-    }
-
-    .card {
-        padding: 2rem;
-    }
-
-    .submit-btn {
-        align-self: flex-start;
-        padding: 0.9rem 2.5rem;
-    }
+    
 
     /* Footer styles */
     footer {
