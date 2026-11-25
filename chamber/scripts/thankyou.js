@@ -8,9 +8,9 @@ const resultsContainer = document.getElementById("submissionResults");
 if (resultsContainer) {
     const params = new URLSearchParams(window.location.search);
 
-    const firstName = params.get("fname") || "Not provided";
-    const lastName = params.get("lname") || "Not provided";
-    const orgTitle = params.get("orgtitle") || "Not provided";
+    const firstName = params.get("firstname") || "Not provided";
+    const lastName = params.get("lastname") || "Not provided";
+    const orgTitle = params.get("organizationaltitle") || "Not provided";
     const email = params.get("email") || "Not provided";
     const phone = params.get("phone") || "Not provided";
     const organization = params.get("organization") || "Not provided";
@@ -19,10 +19,10 @@ if (resultsContainer) {
     const timestamp = params.get("timestamp") || "Not recorded";
 
     const membershipNames = {
-        np: "NP Membership (Non-Profit - No Fee)",
-        bronze: "Bronze Membership ($50/year)",
-        silver: "Silver Membership ($100/year)",
-        gold: "Gold Membership ($150/year)"
+        np: "NP Membership (Non-Profit — No Fee)",
+        bronze: "Bronze Membership",
+        silver: "Silver Membership",
+        gold: "Gold Membership"
     };
 
     const membershipDisplay = membershipNames[membershipCode] || "Not selected";
