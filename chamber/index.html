@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce home page</title>
+    <title>Chamber Home Page</title>
     <meta name="description"
-        content="This page is the home page for the Chamber of Commerce, providing information about the organization and its services.">
+        content="This page is a Home Page of the members for the Chamber of Commerce, that provide information about the organization and services">
     <meta name="author" content="Camilo Valdivieso">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
     <!-- Social Media Tags -->
-    <meta property="og:title" content="Chamber of Commerce Home Page">
+    <meta property="og:title" content="Chamber Home Page">
     <meta property="og:description"
-        content="This page is the home page for the Chamber of Commerce, providing information about the organization and its services.">
+        content="This page is a Home Page of the members for the Chamber of Commerce, that provide information about the organization and services">
     <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
-    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
     <!--CSS folder-->
     <link rel="stylesheet" href="styles/indexsmall.css">
     <link rel="stylesheet" href="styles/indexlarge.css">
@@ -43,9 +43,9 @@
         <!-- Navigation -->
         <nav id="mainNav">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index2.html" class="active">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="final-project.html">Join</a></li>
                 <li><a href="final-project.html">Discover</a></li>
             </ul>
         </nav>
@@ -55,53 +55,45 @@
     </header>
 
     <!-- Page Content -->
-    <main class="home-container">
-        <!-- Hero Section with Attention Grabbing Visuals -->
+    <main class="home-info">
         <section class="hero-panel">
             <img src="images/springfieldcity.webp" alt="Springfield City" class="hero-image">
             <div class="hero-content">
                 <h1>Welcome to Springfield</h1>
-                <p>Empowering local business. Advancing community growth. Shaping our digital horizon together.</p>
-                <a href="join.html" class="cta-button">Join Our Network</a>
+                <p>Connecting local businesses, supporting neighbors, and helping our community grow. </p>
+                <a href="join.html" class="cta-button">Join Here!!</a>
             </div>
         </section>
-
-        <!-- Information Grid Dashboard -->
+    
         <div class="dashboard-grid">
-
-            <!-- Weather Card -->
+        
+            <!-- Weather  -->
             <section class="card weather-card">
-                <h2>Local Forecast</h2>
+                <h2>Today's Weather</h2>
                 <div class="weather-info">
-                    <p class="temp-display">Springfield, OR: <span id="current-temp">--</span></p>
+                    <p class="temp-display">The current temperature in Springfield, OR is <span id="current-temp">--</span></p>
                     <figure>
-                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Weather condition visual" width="100" height="100" class="hidden-icon">
-                        <figcaption>Loading today's forecast...</figcaption>
+                        <img id="weather-icon"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            alt="Weather condition visual" width="100" height="100" class="hidden-icon">
+                        <figcaption>Loading today's weather...</figcaption>
                     </figure>
                 </div>
-                <!-- 3-Day Forecast Section -->
-                <div class="forecast-container">
-                    <h3>3-Day Outlook</h3>
-                    <div id="forecast-days" class="forecast-days-grid"></div>
-                </div>
             </section>
-
-            <!-- Calls to Action Grid Card -->
+        
+            <!-- current event section -->
             <section class="card cta-card">
                 <h2>Chamber Initiatives</h2>
                 <div class="action-links">
                     <a href="directory.html" class="action-btn">Explore Local Directory</a>
                 </div>
             </section>
-
-            <!-- Business Spotlights Section -->
-            <section class="card spotlight-card">
-                <h2>Business Spotlight</h2>
-                <div id="spotlight-container" class="spotlight-wrapper"></div>
-            </section>
-
+        
         </div>
+
     </main>
+
+
     <!-- Footer -->
     <footer>
         <div class="chamber-info">
