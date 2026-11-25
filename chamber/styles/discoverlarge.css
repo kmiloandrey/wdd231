@@ -1,5 +1,5 @@
 /* Desktop layout */
-@media (min-width: 768px) {
+@media only screen and (min-width: 64rem) {
 
     /* Header and navigation */
     header {
@@ -50,6 +50,11 @@
     }
 
     /* main styles */
+
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
     /* Footer styles */
     footer {

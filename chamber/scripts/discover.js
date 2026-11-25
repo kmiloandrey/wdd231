@@ -9,7 +9,7 @@ if (menuButton && mainNav) {
     });
 }
 
-import { places } from '../data/places.mjs'
+import {places} from '../data/places.mjs'
 console.log(places)
 
 const showHere = document.querySelector("#allplaces")
