@@ -9,6 +9,7 @@ if (menuButton && mainNav) {
     });
 }
 
+// places.mjs data display
 import {places} from '../data/places.mjs'
 console.log(places)
 
@@ -43,3 +44,26 @@ function displayItems(places) {
 }
 
 displayItems(places)
+
+//Visit message with localStorage
+
+const visitMessage = document.querySelector("#visit-message");
+const lastVisit = localStorage.getItem("lastVisit");
+const today = Date.now();
+const dayInMs = 1000 * 60 * 60 * 24;
+
+if (!lastVisit) {
+    visitMessage.innerText = "Welcome! Let us know if you have any questions.";
+} else {
+    const daysPassed = Math.floor((today - Number(lastVisit)) / dayInMs);
+
+    if (daysPassed < 1) {
+        visitMessage.innerText = "Back so soon! Awesome!";
+    } else if (daysPassed === 1) {
+        visitMessage.innerText = "You last visited 1 day ago.";
+    } else {
+        visitMessage.innerText = `You last visited ${daysPassed} days ago.`;
+    }
+}
+
+localStorage.setItem("lastVisit", today);

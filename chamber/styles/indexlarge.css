@@ -73,10 +73,17 @@
         margin-bottom: 1.5rem;
     }
 
-    /* 2 columns */
+    /* 3 row style */
+
     .dashboard-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .dashboard-grid>section {
+        flex: 1;
     }
 
     /* Footer styles */

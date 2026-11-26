@@ -15,7 +15,7 @@
     <meta property="og:description"
         content="This page is a Home Page of the members for the Chamber of Commerce, that provide information about the organization and services">
     <meta property="og:image" content="https://kmiloandrey.github.io/wdd231/chamber/images/springfield.webp">
-    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/directory">
+    <meta property="og:url" content="https://kmiloandrey.github.io/wdd231/chamber/index">
     <!--CSS folder-->
     <link rel="stylesheet" href="styles/indexsmall.css">
     <link rel="stylesheet" href="styles/indexlarge.css">
@@ -61,34 +61,42 @@
             <div class="hero-content">
                 <h1>Welcome to Springfield</h1>
                 <p>Connecting local businesses, supporting neighbors, and helping our community grow. </p>
-                <a href="join.html" class="cta-button">Join Here!!</a>
+                <a href="join.html" class="join-button">Join Here!!</a>
             </div>
         </section>
-    
+
         <div class="dashboard-grid">
-        
+
             <!-- Weather  -->
             <section class="card weather-card">
                 <h2>Today's Weather</h2>
                 <div class="weather-info">
-                    <p class="temp-display">The current temperature in Springfield, OR is <span id="current-temp">--</span></p>
+                    <p class="temp-display">The current temperature in Springfield, OR is <span
+                            id="current-temp">--</span></p>
                     <figure>
-                        <img id="weather-icon"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            alt="Weather condition visual" width="100" height="100" class="hidden-icon">
+                        <img id="weather-icon" src="" alt="" width="100" height="100" class="hidden-icon">
                         <figcaption>Loading today's weather...</figcaption>
                     </figure>
                 </div>
+                <h2>3-Day Weather</h2>
+                <div id="future-days"></div>
+
             </section>
-        
+
             <!-- current event section -->
-            <section class="card cta-card">
+            <section class="card directory-card">
                 <h2>Chamber Initiatives</h2>
                 <div class="action-links">
                     <a href="directory.html" class="action-btn">Explore Local Directory</a>
                 </div>
             </section>
-        
+
+            <!-- spotlights -->
+            <section class="card spotlights-card">
+                <h2>Spotlights</h2>
+                <div id="spotlight"></div>
+            </section>
+
         </div>
 
     </main>

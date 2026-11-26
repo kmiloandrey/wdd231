@@ -136,6 +136,13 @@ h1 {
     grid-area: location;
 }
 
+#visit-message {
+    padding: 1rem 1rem;
+    margin: 1rem;
+    font-family: var(--font-titles);
+    font-style: italic;
+    font-weight: bold;
+}
 /* Footer styles */
 footer {
     background-color: var(--primary-color);
