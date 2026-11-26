@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #88B030;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --background-color: #DCEBC4;
+    --wireframe-border: #033220;
+    --font-titles: "Agrave Pro", cursive;
+    --font-text: "Comic Relief", system-ui;
+    --card-bg: #bdd0c7;
+    --border-line: #033220;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 50;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* Navigation menu */
+#mainNav {
+    display: none;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+#mainNav.open {
+    display: block;
+}
+
+#mainNav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainNav ul li a {
+    display: block;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Main style */
+h1 {
+    font-family: var(--font-titles);
+    padding: 1rem 1rem;
+}
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: 1px solid var(--wireframe-border);
+    background-color: var(--background-color);
+    border-radius: 2px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "description"
+        "location";
+}
+
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+    font-family: var(--font-titles);
+}
+
+#allplaces div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+    font-family: var(--font-text);
+}
+
+#allplaces div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}
+
+#visit-message {
+    padding: 1rem 1rem;
+    margin: 1rem;
+    font-family: var(--font-titles);
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--border-line);
+}
